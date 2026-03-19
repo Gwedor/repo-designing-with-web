@@ -1,7 +1,35 @@
-h1 {
-    color: purple;
+/*
+    This is a comment
+*/
+.flex-row-space-between{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
  .red {
     color: red;
  }
+
+ ul {
+    list-style: none;
+    gap: 1em;
+ }
  
+ li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+ }
+
+ h1 {
+    font-family: "Nixie One";
+ }
+
+ h2 {
+    color: green;
+ }
+
+ h2:hover{
+    transition: color 1s;
+    color: red;
+ }
