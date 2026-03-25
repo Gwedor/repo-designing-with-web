@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- a comment -->
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nixie+One&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav class="flex-row-space-between">
+
+        <h1 style="margin-left: 10px">Origin</h1>
+
+        <ul class="menu">
+            <li>Cafés</li>
+            <li>Thés</li>
+            <li>Accessoires</li>
+            <!-- J'ai demandé à Gemini comment mettre un espace entre Promotions et l'icône search, j'ai donc ajouté un margin-right -->
+            <li style="color: rgba(200, 147, 48, 1); margin-right: 40px;">Promotions</li>
+            <li><i data-lucide="search"></i></li>
+            <li><i data-lucide="user"></i></li>
+            <li style="margin-right: 10px;"><i data-lucide="shopping-basket"></i></li>
+        </ul>
+    </nav>
+    <hr>
+
+    <!-- loading the lucide icons -->
+     <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
