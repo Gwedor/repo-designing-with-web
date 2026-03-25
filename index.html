@@ -10,7 +10,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nixie+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nixie+One&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -29,11 +29,78 @@
             <li>Cafés</li>
             <li>Thés</li>
             <li>Accessoires</li>
-            <li>Promotions</li>
+            <li style="color: rgba(200, 147, 48, 1);">Promotions</li>
+            <li><i data-lucide="search"></i></li>
+            <li><i data-lucide="user"></i></li>
             <li><i data-lucide="shopping-basket"></i></li>
         </ul>
     </nav>
+    <hr>
+    <p style="margin-left: 10em; font-size: 2em"><b>Cafés</b></p>
+    <!-- J'ai demande à Gemini comment gérer proprement le bloc filtres à gauche et le bloc principal à droite
+     Je lui ai ensuite demandé s'il y avait une vraie différence entre main et aside.
+     J'ai compris que c'était surtout important pour le SEO, et évidemment plus clair -->
+    <div class="container">
+    <aside class="filters">
+        <h3>Filtrer par :</h3>
+        Notes :
+        <ul class="flex-column-space-between">
+            <li style="gap: 5px;"><i data-lucide="square"></i>Boisées</li>
+            <li style="gap: 5px;"><i data-lucide="square"></i>Corsées</li>
+            <li style="gap: 5px;"><i data-lucide="square"></i>Florales</li>
+            <li style="gap: 5px;"><i data-lucide="square"></i>Fruitées</li>
+        </ul>
+        Intensité :
+        <ul class="flex-column-space-between">
+            <li style="gap: 5px;"><i data-lucide="square"></i>1</li>
+            <li style="gap: 5px;"><i data-lucide="square"></i>2</li>
+            <li style="gap: 5px;"><i data-lucide="square"></i>3</li>
+            <li style="gap: 5px;"><i data-lucide="square"></i>4</li>
+            <li style="gap: 5px;"><i data-lucide="square"></i>5</li>
+        </ul>
+        Origine :
+        <ul class="flex-column-space-between">
+            <li style="gap: 5px;"><i data-lucide="square"></i>Afrique</li>
+            <li style="gap: 5px;"><i data-lucide="square"></i>Amérique du sud</li>
+            <li style="gap: 5px;"><i data-lucide="square"></i>Amérique centrale</li>
+            <li style="gap: 5px;"><i data-lucide="square"></i>Asie</li>
+        </ul>
+    </aside>
 
+    <main class="content">
+        <section class="products-grid">
+
+        <article class="product-card">
+            <i data-lucide="star" style="margin-left: 16em"></i>
+            <img src="images/product_image_comptoirs_richard.png">
+            <h3>Honduras</h3>
+            <p>Notes de mirabelle et de raisin sec</p>
+            <p class="price">10,50€</p>
+            <!-- J'ai demandé à Gemini de centrer le bouton, il m'a d'abord donner une solution avec text-align pour centrer tout le texte
+             Je lui ai deamndé de ne centrer que le bouton, il m'a proposé de faire du bouton un block puis d'utiliser margin,
+             ce qui correspond à ce que je voulais -->
+            <button class="button">Ajouter au panier</button> 
+        </article>
+
+        <article class="product-card">
+            <img src="images/product_image_comptoirs_richard.png">
+            <h3>Honduras</h3>
+            <p>Notes de mirabelle et de raisin sec</p>
+            <p class="price">10,50€</p>
+            <button>Ajouter au panier</button>
+        </article>
+
+        <article class="product-card">
+            <img src="images/product_image_comptoirs_richard.png">
+            <h3>Honduras</h3>
+            <p>Notes de mirabelle et de raisin sec</p>
+            <p class="price">10,50€</p>
+            <button>Ajouter au panier</button>
+        </article>
+
+        </section>
+    </main>
+</div>
     <button popovertarget="my-popup">click me</button>
     <div>
         <h2>chi chi chichikirou</h2>

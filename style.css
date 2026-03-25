@@ -6,6 +6,14 @@
     flex-direction: row;
     justify-content: space-between;
 }
+
+.flex-column-space-between{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 0px; /* J'ai demandé à Gemini comment aligner les éléments de la liste des filtres à gauche car ceux-ci étaient au milieu */
+}
+
  .red {
     color: red;
  }
@@ -23,6 +31,7 @@
 
  h1 {
     font-family: "Nixie One";
+    color: rgba(27, 43, 100, 1);
  }
 
  h2 {
@@ -33,3 +42,58 @@
     transition: color 1s;
     color: red;
  }
+
+ /* J'ai demandé à Gemini comment appliquer la couleur rgba(27, 43, 100, 1) à un élément hr
+ Il a de lui même abordé la question de la bordure grise
+ */
+ hr {
+    border: none;               
+    height: 3px;                
+    background-color: rgba(27, 43, 100, 1); 
+}
+
+.container {
+    display: flex;       /* Aligne l'aside et le main horizontalement */
+    padding: 0px 10px 0px 10px;
+    
+}
+
+.filters {
+    width: 15em;        /* Largeur fixe pour vos filtres */
+    flex-shrink: 0;      /* Empêche les filtres de rétrécir */
+    font-family: "Inter";
+}
+
+.content {
+    flex-grow: 1;        /* Le contenu principal prend tout l'espace restant */
+    padding: 20px;
+}
+
+.products-grid {
+    display: flex;        /* Active l'alignement horizontal */
+    flex-wrap: wrap;      /* Permet de passer à la ligne si l'écran est petit */
+    
+    justify-content: space-between; /* Centre les produits sur la ligne */
+}
+
+.product-card {
+    width: 250px;         /* Donne une largeur fixe à chaque produit */
+    /* Ou utilisez flex: 1 1 250px; pour qu'ils s'adaptent un peu */
+     /* J'ai demandé à Gemini pourquoi ma bordure n'apparaissait pas avec :
+    border: 1px solid rgba(217, 217, 217, 1);
+    J'ai ajouté le mot clé solid */
+    border: 1px solid rgba(217, 217, 217, 1);
+    /* J'ai demandé à Gemini comment fair pour avoir un padding différent poour les côtés et pour en haut et en bas */
+    padding: 10px 60px 10px 60px;
+}
+.price{
+    text-align: right;
+}
+.button{
+    display: block;
+    margin: 0 auto;
+    color: white;
+    background-color: rgba(200, 147, 48, 1);
+    border: none;
+    border-radius: 5px;
+}
