@@ -73,6 +73,23 @@
 
         <article class="product-card">
             <i data-lucide="star" style="margin-left: 16em"></i>
+            <!-- J'ai deamndé à Gemini comment faire en sorte d'arriver sur la page du produit en cliquant sur la carte d'un produit.
+             Il a d'abord propsoé une soluion plus complexe en différenciant le bouton 'Ajouter au panier' du reste de la carte.
+             J'ai préféré garder une solution simple et rendre seulement l'image cliquable -->
+            <a href="product.html">
+                <img src="images/product_image_comptoirs_richard.png">
+            </a>
+            <h3 class="product_title">HONDURAS</h3>
+            <p class="short_description">Notes de mirabelle et de raisin sec</p>
+            <p class="price">10,50€</p>
+            <!-- J'ai demandé à Gemini de centrer le bouton, il m'a d'abord donner une solution avec text-align pour centrer tout le texte
+             Je lui ai deamndé de ne centrer que le bouton, il m'a proposé de faire du bouton un block puis d'utiliser margin,
+             ce qui correspond à ce que je voulais -->
+            <button class="button">Ajouter au panier</button> 
+        </article>
+
+        <article class="product-card">
+            <i data-lucide="star" style="margin-left: 16em"></i>
             <img src="images/product_image_comptoirs_richard.png">
             <h3 class="product_title">HONDURAS</h3>
             <p class="short_description">Notes de mirabelle et de raisin sec</p>
@@ -84,28 +101,20 @@
         </article>
 
         <article class="product-card">
+            <i data-lucide="star" style="margin-left: 16em"></i>
             <img src="images/product_image_comptoirs_richard.png">
-            <h3>Honduras</h3>
-            <p>Notes de mirabelle et de raisin sec</p>
+            <h3 class="product_title">HONDURAS</h3>
+            <p class="short_description">Notes de mirabelle et de raisin sec</p>
             <p class="price">10,50€</p>
-            <button>Ajouter au panier</button>
-        </article>
-
-        <article class="product-card">
-            <img src="images/product_image_comptoirs_richard.png">
-            <h3>Honduras</h3>
-            <p>Notes de mirabelle et de raisin sec</p>
-            <p class="price">10,50€</p>
-            <button>Ajouter au panier</button>
+            <!-- J'ai demandé à Gemini de centrer le bouton, il m'a d'abord donner une solution avec text-align pour centrer tout le texte
+             Je lui ai deamndé de ne centrer que le bouton, il m'a proposé de faire du bouton un block puis d'utiliser margin,
+             ce qui correspond à ce que je voulais -->
+            <button class="button">Ajouter au panier</button> 
         </article>
 
         </section>
     </main>
 </div>
-    <button popovertarget="my-popup">click me</button>
-    <div>
-        <h2>chi chi chichikirou</h2>
-    </div>
 
     <!-- loading the lucide icons -->
      <script src="https://unpkg.com/lucide@latest"></script>

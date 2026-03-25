@@ -70,33 +70,31 @@
 }
 
 .container {
-    display: flex;       /* Aligne l'aside et le main horizontalement */
+    display: flex;
     padding: 0px 10px 0px 10px;
     
 }
 
 .filters {
-    width: 15em;        /* Largeur fixe pour vos filtres */
-    flex-shrink: 0;      /* Empêche les filtres de rétrécir */
+    width: 15em;
+    flex-shrink: 0;
     font-family: "Inter";
     font-size: small;
 }
 
 .content {
-    flex-grow: 1;        /* Le contenu principal prend tout l'espace restant */
+    flex-grow: 1;
     padding: 20px;
 }
 
 .products-grid {
-    display: flex;        /* Active l'alignement horizontal */
-    flex-wrap: wrap;      /* Permet de passer à la ligne si l'écran est petit */
+    display: flex;
     
-    justify-content: space-between; /* Centre les produits sur la ligne */
+    justify-content: space-between;
 }
 
 .product-card {
-    width: 250px;         /* Donne une largeur fixe à chaque produit */
-    /* Ou utilisez flex: 1 1 250px; pour qu'ils s'adaptent un peu */
+    width: 250px;
      /* J'ai demandé à Gemini pourquoi ma bordure n'apparaissait pas avec :
     border: 1px solid rgba(217, 217, 217, 1);
     J'ai ajouté le mot clé solid */
@@ -129,4 +127,65 @@
 .product_title {
     font-family: 'Archivo Black';
     font-size: 12px;
+}
+
+.product-detail-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 40px;
+}
+
+/* Gemini m'a donné la slution 'flex: 1' pour découper la page en deux parts égales */ 
+.product-image-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+} 
+.product-info-side {
+    flex: 1;
+    font-family: 'Inter';
+}
+
+.intensites{
+    display: flex;
+    flex-direction: row;
+    font-family: 'Inter';
+    font-size: medium;
+    padding-left: 0px; /* J'ai demandé à Gemini comment aligner le bloc Intensités à gauche car tout ce que j'avais essayé ne focntionnait pas */
+}
+
+/* J'ai demandé à Gemini comment réduire la taille des icones de grains de café */
+.intensites img {
+    width: 20px;
+    height: auto;
+    filter: sepia(100%) saturate(500%) hue-rotate(10deg) brightness(90%); /* J'ai demandé à Gemini comment changer la couleur des icônes
+    comme je n'ai que les png, j'ai choisi cette solution de bricolage */
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0; 
+}
+
+.button2{
+    display: block;
+    margin: 0 auto;
+    color: white;
+    background-color: rgba(27, 43, 100, 1);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 80px 10px 80px;
+    font-size: 12px;
+    white-space: nowrap; /* J'ai demandé à Gemini comment contraindre le texte à tenir sur une seule ligne */
+    opacity: 0.3;
+    cursor: pointer;
+}
+/* J'ai demandé à Gemini comment faire pour que seul le bouton sélectionné apparaisse avec une opacité de 100% */
+.button2.active {
+    opacity: 1;
 }

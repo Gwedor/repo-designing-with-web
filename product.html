@@ -16,9 +16,11 @@
 
 <body>
     <nav class="flex-row-space-between">
-
-        <h1 style="margin-left: 10px">Origin</h1>
-
+        <!-- J'ai demandé à Gemini comment supprimer le soulignage sous Origin du fait qu'il soit cliquable -->
+        <a href="index.html" style="text-decoration: none;">
+            <h1 style="margin-left: 10px;">Origin</h1>
+        </a>
+            
         <ul class="menu">
             <li>Cafés</li>
             <li>Thés</li>
@@ -31,6 +33,45 @@
         </ul>
     </nav>
     <hr>
+
+    <!-- J'ai demandé à Gemini de me donner la strucutur propre pour pouvoir avoir la moitié gauche pour la photo et la moitié droite pour la description du produit-->
+    <section class="product-detail-container">
+    <div class="product-image-side">
+        <img src="images/product_image_comptoirs_richard.png">
+    </div>
+
+    <div class="product-info-side">
+        <p style="font-family: 'Archivo Black'; font-size: 20px;">HONDURAS</p>
+        <ul class="intensites">
+            <li>Intensités :</li>
+            <li><img src="images/graine-pleine.png"></li>
+            <li><img src="images/graine-pleine.png"></li>
+            <li><img src="images/graine-pleine.png"></li>
+            <li><img src="images/graine-vide.png"></li>
+            <li><img src="images/graine-vide.png"></li>
+        </ul>
+        <p><b>Profil </b>: Rond et ample, belle acidité, notes fruitées de mirabelle et de raisin sec</p>
+        <p style="font-family: 'Archivo Black'; font-size: 18px; margin-bottom: 0;">
+            <b>10,50€</b>
+        </p>
+        <p style="margin-top: 0px;">
+            (42€ /kg)
+        </p>
+        Format
+        <div class="button-group">
+            <button class="button2 active">250g</button>
+            <button class="button2">500g</button>
+            <button class="button2">750g</button>
+        </div>
+        Mouture
+        <div class="button-group">
+            <button class="button2">Grains</button>
+            <button class="button2 active">Espresso</button>
+            <button class="button2">Italienne</button>
+        </div>
+        <button style="margin-left: 0px; margin-top: 65px; font-size: 25px;" class="button">Ajouter au panier</button>
+    </div>
+    </section>
 
     <!-- loading the lucide icons -->
      <script src="https://unpkg.com/lucide@latest"></script>
