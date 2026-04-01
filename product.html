@@ -17,7 +17,7 @@
 <body>
     <nav class="flex-row-space-between">
         <!-- J'ai demandé à Gemini comment supprimer le soulignage sous Origin du fait qu'il soit cliquable -->
-        <a href="index.html" style="text-decoration: none;">
+        <a href="index2.html" style="text-decoration: none;">
             <h1 style="margin-left: 10px;">Origin</h1>
         </a>
             
@@ -37,11 +37,11 @@
     <!-- J'ai demandé à Gemini de me donner la strucutur propre pour pouvoir avoir la moitié gauche pour la photo et la moitié droite pour la description du produit-->
     <section class="product-detail-container">
     <div class="product-image-side">
-        <img src="images/product_image_comptoirs_richard.png">
+        <img id="product-image">
     </div>
 
     <div class="product-info-side">
-        <p style="font-family: 'Archivo Black'; font-size: 20px;">HONDURAS</p>
+        <p id="product-title" style="font-family: 'Archivo Black'; font-size: 20px;">HONDURAS</p>
         <ul class="intensites">
             <li>Intensités :</li>
             <li><img src="images/graine-pleine.png"></li>
@@ -50,10 +50,9 @@
             <li><img src="images/graine-vide.png"></li>
             <li><img src="images/graine-vide.png"></li>
         </ul>
-        <p><b>Profil </b>: Rond et ample, belle acidité, notes fruitées de mirabelle et de raisin sec</p>
-        <p style="font-family: 'Archivo Black'; font-size: 18px; margin-bottom: 0;">
-            <b>10,50€</b>
-        </p>
+        <!-- J'avais ceci : <p id="product-description"></p>, j'ai demandé à Claude comment avoir "Profil :" marqué avant afin de conserver le design du Figma -->
+        <p><b>Profil </b>: <span id="product-description"></span></p>
+        <p id="product-price" style="font-family: 'Archivo Black'; font-size: 18px; margin-bottom: 0;"></p>
         <p style="margin-top: 0px;">
             (42€ /kg)
         </p>
@@ -77,5 +76,24 @@
      <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         lucide.createIcons();
+    </script>
+
+    <!-- J'ai demandé à Claude comment faire en sorte de bien arriver sur la page du produit sur lequel on clique
+     J'ai ensuite réutilisé les différentes target dans le code html pour le rendre dynamique -->
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const brand = params.get("brand");
+        const index = parseInt(params.get("index"));
+
+        fetch("https://makerslab.em-lyon.com/dww/data/products.json")
+            .then(response => response.json())
+            .then(data => {
+                const model = data.items[brand][index];
+
+                document.querySelector("#product-image").src = model.image;
+                document.querySelector("#product-title").textContent = model.name.toUpperCase();
+                document.querySelector("#product-description").textContent = model.description;
+                document.querySelector("#product-price").textContent = model.price + "€";
+            });
     </script>
 </body>

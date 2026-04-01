@@ -89,7 +89,7 @@
 
 .products-grid {
     display: flex;
-    
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -102,6 +102,14 @@
     /* J'ai demandé à Gemini comment fair pour avoir un padding différent poour les côtés et pour en haut et en bas */
     padding: 10px 60px 10px 60px;
 }
+
+/* Avec l'étape JavaScript les images n'étaient plus centrées dans les cartes des produits, elle sortaient complètement de la carte.
+J'ai demandé à Claude de forcer l'image à tenir centrée dans la carte produit */ 
+.product-card img {
+    display: block;
+    margin: 0 auto;
+}
+
 .price{
     text-align: right;
     font-family: 'Archivo Black';

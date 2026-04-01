@@ -12,10 +12,65 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nixie+One&display=swap" rel="stylesheet">
 
-    <!-- -->
+    <!-- JS ressources -->
+    <!-- defer parameter delay the script page load -->
+    <script src="script.js" defer></script>
+
 </head>
 <body>
 
+    <nav class="flex-row-space-between">
+
+        <h1 style="margin-left: 10px">Origin</h1>
+
+        <ul class="menu">
+            <li>Cafés</li>
+            <li>Thés</li>
+            <li>Accessoires</li>
+            <!-- J'ai demandé à Gemini comment mettre un espace entre Promotions et l'icône search, j'ai donc ajouté un margin-right -->
+            <li style="color: rgba(200, 147, 48, 1); margin-right: 40px;">Promotions</li>
+            <li><i data-lucide="search"></i></li>
+            <li><i data-lucide="user"></i></li>
+            <li style="margin-right: 10px;"><i data-lucide="shopping-basket"></i></li>
+        </ul>
+    </nav>
+    <hr>
+    <p style="margin-left: 8.5em; font-size: 2em; font-family: 'Archivo Black';"><b>Cafés</b></p>
+    <!-- J'ai demande à Gemini comment gérer proprement le bloc filtres à gauche et le bloc principal à droite
+     Je lui ai ensuite demandé s'il y avait une vraie différence entre main et aside.
+     J'ai compris que c'était surtout important pour le SEO, et évidemment plus clair -->
+    <div class="container">
+    <aside class="filters">
+        <h3>Filtrer par :</h3>
+        <p style="font-size: 15px;">Notes :</p>
+        <ul class="flex-column-space-between">
+            <li style="gap: 5px;"><i data-lucide="square"></i>Boisées</li>
+            <li style="gap: 5px;"><i data-lucide="square"></i>Corsées</li>
+            <li style="gap: 5px;"><i data-lucide="square"></i>Florales</li>
+            <li style="gap: 5px;"><i data-lucide="square"></i>Fruitées</li>
+        </ul>
+        <p style="font-size: 15px;">Intensité :</p>
+        <ul class="flex-column-space-between">
+            <li style="gap: 5px;"><i data-lucide="square"></i>1</li>
+            <li style="gap: 5px;"><i data-lucide="square"></i>2</li>
+            <li style="gap: 5px;"><i data-lucide="square"></i>3</li>
+            <li style="gap: 5px;"><i data-lucide="square"></i>4</li>
+            <li style="gap: 5px;"><i data-lucide="square"></i>5</li>
+        </ul>
+        <p style="font-size: 15px;">Origine :</p>
+        <ul class="flex-column-space-between">
+            <li style="gap: 5px;"><i data-lucide="square"></i>Afrique</li>
+            <li style="gap: 5px;"><i data-lucide="square"></i>Amérique du sud</li>
+            <li style="gap: 5px;"><i data-lucide="square"></i>Amérique centrale</li>
+            <li style="gap: 5px;"><i data-lucide="square"></i>Asie</li>
+        </ul>
+    </aside>
+
+    <main class="content">
+        
+        <section class="products-grid" id="cards-container"></section>
+    </main>
+</div>
 
     <!-- loading the lucide icons -->
      <script src="https://unpkg.com/lucide@latest"></script>
